@@ -19,7 +19,7 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
-        projectBaseDir: "/sonarqube-scanner/"
+        projectBaseDir: "/home/runner/work/sonar-scanning-examples/sonar-scanning-examples'"
         projectKey: "my-custom-project"
         projectName: "SampleTest"
         projectVersion: "v0.0.1"
