@@ -15,7 +15,6 @@ jobs:
     steps:
     - name: ls
       run: |
-        pwd
         ls -la
     - uses: actions/checkout@master
     - name: SonarQube Scan
@@ -23,7 +22,7 @@ jobs:
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
-        projectBaseDir: "./sonar-scanning-examples/sonarqube-scanner/'"
+        projectBaseDir: "./sonar-scanning-examples/sonarqube-scanner/"
         projectKey: "my-custom-project"
         projectName: "SampleTest"
         projectVersion: "v0.0.1"
