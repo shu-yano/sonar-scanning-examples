@@ -30,4 +30,4 @@ jobs:
         projectBaseDir: "./sonarqube-scanner"
         projectKey: "pj_develop1"
         projectName: "pj_devlop1"
-        projectVersion: "develop"
+        projectVersion: "develop1"
