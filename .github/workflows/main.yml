@@ -4,6 +4,11 @@ name: CI
 
 # Controls when the workflow will run
 on:
+    # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -20,6 +25,6 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
         projectBaseDir: "./sonarqube-scanner"
-        projectKey: "pj2"
-        projectName: "pj2"
-        projectVersion: "main"
+        projectKey: "pj_develop"
+        projectName: "pj_devlop"
+        projectVersion: "develop"
