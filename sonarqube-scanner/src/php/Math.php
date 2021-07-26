@@ -43,6 +43,9 @@
  */
 function add($v1 , $v2)
     {
+    
+    
+            hoge
         return ($v1 + $v2);
     }
 
