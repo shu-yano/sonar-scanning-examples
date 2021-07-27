@@ -8,8 +8,7 @@ on:
     # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ develop ]
-  pull_request:
-    branches: [ develop ]
+  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -29,8 +28,9 @@ jobs:
         -e SONAR_HOST_URL=${{ secrets.SONARQUBE_HOST }} \
         -e SONAR_LOGIN=${{ secrets.SONARQUBE_TOKEN }} \
         -e SONAR_PROJECT_BASE_DIR=./sonarqube-scanner \
-        sonarsource/sonar-scanner-cli \
-        -Dsonar.sonar.projectName=pj2_develop \
-        -Dsonar.sonar.projectKey=pj2_develop \
-        -Dsonar.sonar.projectVersion=${{ github.run_id }} \
+        -Dsonar.projectName=pj2_develop \
+        -Dsonar.projectKey=pj2_develop \
+        -Dsonar..sourceEncoding=UTF-8 \
+        -Dsonar.projectVersion=${{ github.run_id }} \
         -DSRC_PATH=./ \
+        sonarsource/sonar-scanner-cli
