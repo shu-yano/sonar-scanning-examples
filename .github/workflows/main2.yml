@@ -28,9 +28,9 @@ jobs:
         -e SONAR_HOST_URL=${{ secrets.SONARQUBE_HOST }} \
         -e SONAR_LOGIN=${{ secrets.SONARQUBE_TOKEN }} \
         -e SONAR_PROJECT_BASE_DIR=./sonarqube-scanner \
+        -DSRC_PATH=./ \
+        sonarsource/sonar-scanner-cli \
         -Dsonar.projectName=pj2_develop \
         -Dsonar.projectKey=pj2_develop \
         -Dsonar..sourceEncoding=UTF-8 \
-        -Dsonar.projectVersion=${{ github.run_id }} \
-        -DSRC_PATH=./ \
-        sonarsource/sonar-scanner-cli
+        -Dsonar.projectVersion=${{ github.run_id }}
