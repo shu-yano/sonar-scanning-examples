@@ -13,8 +13,8 @@ steps:
 - task: SonarQubePrepare@4
   inputs:
     SonarQube: 'airlake-backend'
-    scannerMode: 'CLI'
-    configMode: 'file'
+    scannerMode: 'MSBuild'
+    projectKey: 'airlake-backend'
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
