@@ -14,7 +14,10 @@ steps:
   inputs:
     SonarQube: 'airlake-backend'
     scannerMode: 'CLI'
-    configMode: 'file'
+    configMode: 'manual'
+    cliProjectKey: 'airlake-backend'
+    cliProjectName: 'airlake-backend'
+    cliSources: 'sonarqube-scanner'
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
