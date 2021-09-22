@@ -17,6 +17,7 @@ steps:
     configMode: 'manual'
     cliProjectKey: 'airlake-backend'
     cliProjectName: 'airlake-backend'
+    cliProjectVersion: 'v2'
     cliSources: 'sonarqube-scanner'
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
